@@ -24,6 +24,11 @@ const AnimalesSchema = new Schema({
     type: String,
     required: true,
     match: /[a-z]/
+  },
+  tipo_animal: {
+    type: String,
+    required: true,
+    match: /[a-z]/
   }
 
 });

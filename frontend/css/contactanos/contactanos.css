@@ -1,0 +1,131 @@
+:root {
+    --verde: #94c83d;
+    --negro: #231f20;
+    --negro-100: #a39196;
+    --negro-200: #ccb6bb;
+    --negro--100: #7a6d70;
+    --negro--200: #52494b;
+    --blanco: #ffffff;
+    --verde--100: #79a331;
+    --verde-200: #3D5218;
+}
+
+.seccion-contactos {
+    width: 100%;
+    height: 1000px;
+    padding: 2%;
+
+    background-image: url('../../public/fondo\ de\ Sabana.jpg');
+    background-size: cover;
+    background-repeat: fixed;
+    background-position: center;
+}
+
+.contenedor {
+    height: 100%;
+    width: 100%;
+
+    background-color: rgb(35, 31, 32, .8);
+    border-radius: 4rem;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: center;
+}
+
+.separadores {
+    width: 100%;
+    height: 100%;
+
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.separadores img {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.separadores h2 {
+    color: var(--negro-100);
+    position: absolute;
+    width: 550px;
+    font-size: 6rem;
+    text-align: center;
+}
+
+.separadores b {
+    color: var(--verde);
+}
+
+@keyframes rotacion {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.rotar {
+    animation-name: rotacion;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+.titulo-formulario {
+    font-size: 3rem;
+    color: var(--blanco);
+    text-align: center;
+}
+
+.formulario-reseña {
+    background: var(--negro);
+    width: 100%;
+    height: 100%;
+
+    padding: 3rem;
+    border: var(--verde-200) solid 3px;
+    border-radius: 2rem;
+    box-shadow: 15px 15px 30px var(--negro);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.controles {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 1rem;
+}
+
+.indicador {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.controles label {
+    width: 100%;
+    color: var(--blanco);
+}
+
+.titulo-formulario {
+    margin-bottom: 3rem;
+}
+
+.campos {
+    width: 100%;
+    font-size: 1.25rem;
+    padding: 1rem;
+
+    background: #79a331;
+    border-radius: 5px;
+    border: var(--verde-200) solid 3px;
+    color: var(--blanco);
+    border-radius: 10px;
+}

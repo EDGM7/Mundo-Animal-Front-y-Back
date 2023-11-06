@@ -1,0 +1,240 @@
+:root {
+  --verde: #94c83d;
+  --negro: #231f20;
+  --negro-100: #a39196;
+  --negro-200: #ccb6bb;
+  --negro--100: #7a6d70;
+  --negro--200: #52494b;
+  --blanco: #ffffff;
+  --verde--100: #79a331;
+  --verde-100: #5b7a25;
+
+  --texto-poster: 2.5rem;
+  --texto-titulo: 1.75rem;
+  --text-titulo-secundario: 1.5rem;
+  --texto-encabezados: 1.25rem;
+  --texto-parrafos: 1rem;
+}
+
+.poster {
+  background-image: url("../public/Poster.jpg");
+  background-size: cover;
+  background-position: fixed;
+
+  height: 800px;
+  width: 100%;
+}
+
+.titulo-poster {
+  height: 100%;
+  width: 40%;
+  padding: 2rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.titulo-poster h1 {
+  font-weight: bolder;
+  font-size: 7rem;
+  color: var(--negro);
+}
+
+.verde {
+  color: var(--verde);
+}
+
+.verde-100 {
+  color: var(--verde--100);
+}
+
+/* Acomodamos un estilo de boton para todas las paginas */
+
+.caja-botones {
+  display: flex;
+  gap: 3rem;
+}
+
+.estilo-boton {
+  cursor: pointer;
+  border: none;
+  padding: 0.75rem 4rem;
+  font-size: var(--texto-encabezados);
+  border-radius: 1rem;
+
+  background-color: var(--negro);
+  color: var(--verde);
+
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.estilo-boton:hover {
+  color: var(--negro); /* color de fuente hover */
+}
+
+.estilo-boton::after {
+  content: "";
+  background: var(--verde); /* color de fondo hover */
+  position: absolute;
+  z-index: -1;
+  padding: 0.75rem;
+  display: block;
+  border-radius: 50%;
+  left: -50%;
+  right: -50%;
+  top: -150%;
+  bottom: -150%;
+  transform: scale(0, 0);
+  transition: all 0.5s ease;
+}
+
+.estilo-boton:hover::after {
+  transition: all 0.5s ease-out;
+  transform: scale(1, 1);
+}
+
+.curiosidades {
+  width: 100%;
+  height: 800px;
+  padding: 3rem;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: auto;
+  justify-content: center;
+}
+
+.circulo {
+  border-radius: 100%;
+  background-color: var(--verde);
+  display: flex;
+  align-items: center;
+  width: 400px;
+  height: 400px;
+
+  margin: auto 4rem;
+  padding: 1rem;
+  border: solid 2px var(--negro);
+}
+
+.circulo h2 {
+  width: 100%;
+  text-align: center;
+  font-size: 3rem;
+}
+
+.circulo h2:hover {
+    cursor: pointer;
+}
+
+/* Seccion donde estan los diseños de las galerias */
+
+.galerias {
+  width: 100%;
+  height: 1600px;
+
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.gal-contenedores {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.contenido-informativo {
+  background-color: var(--verde-100);
+  height: 100%;
+  width: 100%;
+  padding: 4rem;
+  text-align: end;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.contenido-informativo h3 {
+  color: var(--blanco);
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.contenido-informativo p {
+  color: var(--blanco);
+  font-size: 2rem;
+}
+
+.contenido-informativo2 {
+  text-align: start;
+}
+
+.acordeon {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.acordeon img {
+  width: 0px;
+  flex-grow: 1;
+  object-fit: cover;
+  opacity: 1;
+  transition: 0.5s;
+  border: solid 2px var(--verde);
+}
+
+.acordeon img:hover {
+  cursor: crosshair;
+  width: 90%;
+  opacity: 1;
+  filter: contrast(120%);
+  transition: 0.5s;
+}
+
+.continentes {
+  height: 150vh;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.continentes h2 {
+  color: var(--negro);
+  font-size: 4rem;
+  padding: 0 25rem;
+  text-align: center;
+}
+
+@keyframes rotacion {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.continentes div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.continentes .rotar {
+  animation-name: rotacion;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+
+.continentes .mundo {
+  position: absolute;
+  padding: auto;
+}

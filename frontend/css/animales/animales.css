@@ -1,0 +1,214 @@
+:root {
+  --verde: #94c83d;
+  --negro: #231f20;
+  --negro-100: #a39196;
+  --negro-200: #ccb6bb;
+  --negro--100: #7a6d70;
+  --negro--200: #52494b;
+  --blanco: #ffffff;
+  --verde--100: #79a331;
+  --verde-200: #3d5218;
+}
+
+/* Ajustamos diseño de cada parte informativa de Animales */
+.secciones-informativas {
+  width: 100%;
+  height: 1000px;
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.secciones-informativas .imagen {
+  padding: 2rem 5rem;
+  width: 55%;
+  height: 550px;
+}
+
+.secciones-informativas .imagen img {
+  width: 100%;
+  height: 100%;
+  border-radius: 2rem;
+  border: solid 3px var(--verde-200);
+}
+
+.secciones-informativas .contenido-informativos {
+  height: 550px;
+  width: 45%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  padding: 3rem;
+}
+
+.secciones-informativas .tipo-2 {
+  text-align: end;
+}
+
+.contenido-informativos h2 {
+  color: var(--negro);
+  font-size: 3.5rem;
+  font-weight: bold;
+}
+
+.contenido-informativos h2 b {
+  color: var(--verde);
+}
+
+.contenido-informativos p {
+  font-size: 2rem;
+  color: var(--negro);
+}
+
+/* Estilos de la parte de la lista de animales */
+
+.animales {
+    padding: 2rem;
+}
+
+.titulo-seccion-animales {
+  width: 100%;
+  text-align: center;
+  font-size: 3rem;
+  color: var(--negro);
+
+  border-bottom: 3px solid var(--negro); 
+  padding: 2rem;
+  margin-bottom: 2rem;
+  font-weight: bold;
+}
+
+.titulo-seccion-animales b {
+    color: var(--verde);
+}
+
+.lista-animales {
+  height: auto;
+  width: 100%;
+  padding: 1rem;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.tarjeta-producto {
+  background: var(--negro);
+  border: var(--verde) solid 5px;
+  padding: 1rem;
+  border-radius: 1rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  gap: 2rem;
+  transition: 0.5s;
+}
+
+.tarjeta-producto:hover {
+  scale: 1.2;
+  transition: 0.5s;
+}
+
+.img-producto {
+  border: var(--verde-200) solid 1px;
+  border-radius: 1rem;
+
+  width: 100%;
+  min-height: 300px;
+  height: auto;
+}
+
+.titulo-producto {
+  font-size: 2rem;
+  color: var(--blanco);
+}
+
+.descripcion {
+  font-size: 1.5rem;
+  color: var(--blanco);
+  font-weight: bold;
+}
+
+.cienftífico {
+  font-size: 1.75rem;
+  color: var(--verde);
+  font-weight: bold;
+}
+
+.animacion-color {
+  animation-name: animacion-color;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+.animacion-color-texto {
+  animation-name: animacion-color-texto;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes animacion-color {
+  0% {
+    border-color: var(--verde);
+  }
+  15% {
+    border-color: var(--verde--100);
+  }
+  25% {
+    border-color: var(--verde-200);
+  }
+  35% {
+    border-color: var(--verde--100);
+  }
+  50% {
+    border-color: var(--verde);
+  }
+  65% {
+    border-color: var(--verde--100);
+  }
+  75% {
+    border-color: var(--verde-200);
+  }
+  85% {
+    border-color: var(--verde--100);
+  }
+  100% {
+    border-color: var(--verde);
+  }
+}
+
+@keyframes animacion-color-texto {
+  0% {
+    color: var(--verde);
+  }
+  15% {
+    color: var(--verde--100);
+  }
+  25% {
+    color: var(--verde-200);
+  }
+  35% {
+    color: var(--verde--100);
+  }
+  50% {
+    color: var(--verde);
+  }
+  65% {
+    color: var(--verde--100);
+  }
+  75% {
+    color: var(--verde-200);
+  }
+  85% {
+    color: var(--verde--100);
+  }
+  100% {
+    color: var(--verde);
+  }
+}

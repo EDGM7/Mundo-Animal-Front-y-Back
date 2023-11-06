@@ -1,0 +1,40 @@
+:root {
+    --verde: #94c83d;
+    --negro: #231f20;
+    --negro-100: #a39196;
+    --negro-200: #ccb6bb;
+    --negro--100: #7a6d70;
+    --negro--200: #52494b;
+    --blanco: #ffffff;
+    --verde--100: #79a331;
+    --verde-200: #3D5218;
+}
+
+.tipos-habitats {
+    width: 100%;
+    height: 100vh;
+
+    background-image: url('../../public/Fondo\ Habitats.jpeg');
+    background-size: cover;
+    background-repeat: fixed;
+    background-position: center;
+}
+
+.seccion-botones {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10%;
+}
+
+.estilo-boton {
+    color: var(--blanco);
+    font-size: 2.5rem;
+    width: 90%;
+    height: 15%;
+    border-radius: 3rem;
+}

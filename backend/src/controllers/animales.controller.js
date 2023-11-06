@@ -5,10 +5,10 @@ class AnimalesController {
 
     async agregar(req, res) {
         try {
-            const { nombre, nombre_cientifico, habitat, peligro_extincion } = req.body;
+            const body = req.body;
 
             //Validamos que esten completos los campos
-            if (!nombre || !nombre_cientifico || !habitat || !peligro_extincion) {
+            if (!body.nombre || !body.nombre_cientifico || !body.habitat || !body.peligro_extincion || !body.tipo_animal) {
                 return res.status(400).json({
                     ok: false, mensaje: 'Debes completar todos los campos solicitados'
                 })
@@ -16,7 +16,7 @@ class AnimalesController {
 
             //validamos que no exista otro animal con el mismo nombre
             const existeAnimal = await AnimalesModel.findOne({
-                nombre, nombre_cientifico
+                nombre: body.nombre, nombre_cientifico: body.nombre_cientifico
             })
 
             if (existeAnimal) {
@@ -28,7 +28,7 @@ class AnimalesController {
 
             // Creamos el nuevo Animal
             const nuevoAnimal = {
-                nombre, nombre_cientifico, habitat, peligro_extincion
+                nombre: body.nombre, nombre_cientifico: body.nombre_cientifico, habitat: body.habitat, peligro_extincion: body.peligro_extincion, tipo_animal: body.tipo_animal
             }
 
             const animalCreado = await AnimalesModel.create(
@@ -43,7 +43,7 @@ class AnimalesController {
             }
             res.status(200).json({
                 ok: true,
-                Servidor: animalCreado,
+                Animal: animalCreado,
             })
 
         } catch (error) {
@@ -58,7 +58,7 @@ class AnimalesController {
     async mostrar(req, res) {
         try {
             const totalAnimales = await AnimalesModel.find().select(
-                '_id nombre nombre_cientifico habitat peligro_extincion'
+                '_id nombre nombre_cientifico habitat peligro_extincion tipo_animal'
             )
             return res.status(200).json({
                 ok: true,

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mundo Animal</title>
+
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/contactanos/contactanos.css">
+</head>
+
+<body>
+    <header class="cabecera">
+        <div class="titulo-principal">
+            <h1>
+                <b>M</b>undo <b>A</b>nimal
+            </h1>
+        </div>
+
+        <nav class="navegacion">
+            <ul>
+                <li><a href="../index.html"><span>Home</span></a></li>
+                <li><a href="animales.html"><span>Animales</span></a></li>
+                <li><a href="habitats.html"><span>Habitats</span></a></li>
+                <li><a href="contactanos.html"><span class="activo">Contáctanos</span></a></li>
+                <li></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main>
+
+        <section class="seccion-contactos"> 
+            <article class="contenedor">
+                <div class="separadores">
+                    <img src="../public/Rotacion.png" class="rotar" alt="">
+                    <h2>¡<b>Agrega</b> un animal al <b>M</b>undo <b>A</b>nimal!</h2>
+                </div>
+
+                <div class="separadores">
+                    <form action="" class="formulario-reseña">
+                        <h4 class="titulo-formulario">Agregar Animal</h4>
+    
+                        <div class="controles">
+                            <label for="nombre" class="indicador">Nombre Animal:</label>
+                            <input class="campos" type="text" placeholder="Escribe el nombre del animal" value="" id="nombre">
+                        </div>
+                        <div class="controles">
+                            <label for="categoria" class="indicador">Nombre Cientifico:</label>
+                            <input class="campos" type="text" placeholder="Escribe el nombre científico." value="" id="cientifico">
+                        </div>
+                        <div class="control-doble">
+                            <div class="controles">
+                                <label for="precio" class="indicador">Hábitat Natural:</label>
+                                <input class="campos" placeholder="Escribe el habitat natural" id="habitat">
+                            </div>
+                            <div class="controles">
+                                <label for="moneda" class="indicador">En Peligro:</label>
+                                <select name="" id="peligro" class="campos">
+                                    <option value="Si">Si</option>
+                                    <option value="No">No</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="controles">
+                            <label for="imagen" class="indicador">Tipo de Animal:</label>
+                            <select name="" id="tipo" class="campos">
+                                <option value="Aéreo">Aéreo</option>
+                                <option value="Terrestre">Terrestre</option>
+                                <option value="Marino">Marino</option>
+                            </select>
+                        </div>
+    
+                        <button type="submit" class="estilo-boton" id="publicar-animal">Publicar Producto</button>
+                    </form>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer  class="pie">
+        <h6>
+            Derechos de autor Reservados © <b>M</b>undo <b>A</b>nimal/ <b class="fecha">31-10-2023</b> / Repositorio del proyecto: <a href="https://github.com/EDGM7/Mundo-Animal-Front-y-Back">Aquí</a>
+        </h6>
+    </footer>
+
+    <script src="../javascript/contactanos.js"></script>
+</body>
+
+</html>

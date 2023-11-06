@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mundo Animal</title>
+
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/habitats/habitats.css">
+    
+</head>
+
+<body>
+    <header class="cabecera">
+        <div class="titulo-principal">
+            <h1>
+                <b>M</b>undo <b>A</b>nimal
+            </h1>
+        </div>
+
+        <nav class="navegacion">
+            <ul>
+                <li><a href="../index.html"><span>Home</span></a></li>
+                <li><a href="animales.html"><span>Animales</span></a></li>
+                <li><a href="habitats.html"><span class="activo">Habitats</span></a></li>
+                <li><a href="contactanos.html"><span>Contáctanos</span></a></li>
+                <li></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main>
+
+        <section class="tipos-habitats">
+            <div class="seccion-botones">
+                <button onclick= cambioTerrestre() class="estilo-boton">
+                    Hábitats Terrestres
+                </button>
+                <button onclick=cambioAcuatico() class="estilo-boton">
+                    Hábitats Acuáticas
+                </button>
+                <button onclick=cambioAereo() class="estilo-boton">
+                    Hábitats Aéreas
+                </button>
+            </div>
+        </section>
+
+    </main>
+
+    <footer  class="pie">
+        <h6>
+            Derechos de autor Reservados © <b>M</b>undo <b>A</b>nimal/ <b class="fecha">31-10-2023</b> / Repositorio del proyecto: <a href="https://github.com/EDGM7/Mundo-Animal-Front-y-Back">Aquí</a>
+        </h6>
+    </footer>
+
+    <script src="../javascript/habitats.js"></script>
+</body>
+
+</html>

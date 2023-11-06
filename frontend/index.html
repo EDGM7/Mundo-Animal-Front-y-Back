@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mundo Animal</title>
+
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/carrousel.css">
+</head>
+
+<body>
+    <header class="cabecera">
+        <div class="titulo-principal">
+            <h1>
+                <b>M</b>undo <b>A</b>nimal
+            </h1>
+        </div>
+
+        <nav class="navegacion">
+            <ul>
+                <li><a href="index.html"><span class="activo">Home</span></a></li>
+                <li><a href="html/animales.html"><span>Animales</span></a></li>
+                <li><a href="html/habitats.html"><span>Habitats</span></a></li>
+                <li><a href="html/contactanos.html"><span>Contáctanos</span></a></li>
+                <li></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main>
+        <section class="poster">
+
+            <div class="titulo-poster">
+                <h1>
+                    Descubre la <b class="verde">Fauna</b> del <b class="verde-100">Mundo</b>
+                </h1>
+
+                <div class="caja-botones">
+                    <a href="html/animales.html">
+                        <button class="estilo-boton">
+                            Animales
+                        </button>
+                    </a>
+
+                    <a href="html/habitats.html">
+                        <button class="estilo-boton">
+                            Habitats
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="curiosidades">
+
+            <div class="circulo">
+                <h2 onclick=redireccion()>
+                    ¿Que és un habitat?
+                </h2>
+            </div>
+
+            <div class="circulo">
+                <h2 onclick=redireccion2()>
+                    ¿Que és una especie en peligro?
+                </h2>
+            </div>
+
+            <div class="circulo">
+                <h2 onclick=redireccion3()>
+                    ¿Que és Fauna?
+                </h2>
+            </div>
+        </section>
+
+        <section class="galerias">
+            <div class="gal-contenedores">
+                <article class="carousel" aria-label="Gallery">
+                    <ol class="carousel__viewport">
+                        <li id="carousel__slide1" tabindex="0" class="carousel__slide">
+                            <div class="carousel__snapper">
+                                <a href="#carousel__slide4" class="carousel__prev">Go to last slide</a>
+                                <a href="#carousel__slide2" class="carousel__next">Go to next slide</a>
+                            </div>
+                        </li>
+                        <li id="carousel__slide2" tabindex="0" class="carousel__slide">
+                            <div class="carousel__snapper"></div>
+                            <a href="#carousel__slide1" class="carousel__prev">Go to previous slide</a>
+                            <a href="#carousel__slide3" class="carousel__next">Go to next slide</a>
+                        </li>
+                        <li id="carousel__slide3" tabindex="0" class="carousel__slide">
+                            <div class="carousel__snapper"></div>
+                            <a href="#carousel__slide2" class="carousel__prev">Go to previous slide</a>
+                            <a href="#carousel__slide4" class="carousel__next">Go to next slide</a>
+                        </li>
+                        <li id="carousel__slide4" tabindex="0" class="carousel__slide">
+                            <div class="carousel__snapper"></div>
+                            <a href="#carousel__slide3" class="carousel__prev">Go to previous slide</a>
+                            <a href="#carousel__slide1" class="carousel__next">Go to first slide</a>
+                        </li>
+                    </ol>
+                    <aside class="carousel__navigation">
+                        <ol class="carousel__navigation-list">
+                            <li class="carousel__navigation-item">
+                                <a href="#carousel__slide1" class="carousel__navigation-button">Go to slide 1</a>
+                            </li>
+                            <li class="carousel__navigation-item">
+                                <a href="#carousel__slide2" class="carousel__navigation-button">Go to slide 2</a>
+                            </li>
+                            <li class="carousel__navigation-item">
+                                <a href="#carousel__slide3" class="carousel__navigation-button">Go to slide 3</a>
+                            </li>
+                            <li class="carousel__navigation-item">
+                                <a href="#carousel__slide4" class="carousel__navigation-button">Go to slide 4</a>
+                            </li>
+                        </ol>
+                    </aside>
+                </article>
+
+                <article class="contenido-informativo">
+                    <h3>Tipos de Animales</h3>
+                    <p>Según lo que comen, los animales se pueden agrupar en: Herbívoros, si su base alimenticia está
+                        compuesta de vegetales; Carnívoros, si se alimentan de carne; Insectívoros, si se alimentan de
+                        insectos; y Omnívoros, si se alimentan de animales y vegetales.</p>
+                    <div>
+                        <a href="html/animales.html">
+                            <button class="estilo-boton">
+                                Animales
+                            </button>
+                        </a>
+                    </div>
+                </article>
+            </div>
+
+            <div class="gal-contenedores">
+                <article class="contenido-informativo contenido-informativo2">
+                    <h3>Zoológicos</h3>
+                    <p>Un parque zoológico, jardín zoológico, casa de fieras, zoológico o zoo, es una instalación en la
+                        que se exhiben animales no humanos dentro de recintos expuestos al público y en las que también
+                        pueden ser criados.</p>
+                    <div>
+                        <a href="html/habitats.html">
+                            <button class="estilo-boton">
+                                Habitats
+                            </button>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="acordeon">
+                    <img src="public/a.jpg" alt="">
+                    <img src="public/b.webp" alt="">
+                    <img src="public/c.jpg" alt="">
+                    <img src="public/d.JPG" alt="">
+                    <img src="public/e.webp" alt="">
+                </article>
+            </div>
+        </section>
+
+        <section class="continentes">
+            <h2>Descubre los continente con mayor Fauna del Mundo</h2>
+            <div>
+                <img src="public/Rotacion.png" class="rotar" alt="">
+                <a href="https://www.sostenibilidad.com/medio-ambiente/top-10-paises-mayor-diversidad/" class="mundo"><img src="public/mundo.png" alt=""></a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="pie">
+        <h6>
+            Derechos de autor Reservados © <b>M</b>undo <b>A</b>nimal/ <b class="fecha">31-10-2023</b> / Repositorio del
+            proyecto: <a href="https://github.com/EDGM7/Mundo-Animal-Front-y-Back">Aquí</a>
+        </h6>
+    </footer>
+
+    <script src="javascript/redireccion.js"></script>
+</body>
+
+</html>
